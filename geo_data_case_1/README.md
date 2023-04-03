@@ -1,4 +1,4 @@
-This is an excercise to explore, process and build prediction model based on dataset with geospatial features.
+This is an excercise to explore, process and build prediction model based on a simple dataset with geospatial features.
 Label to predict here is `potential_kwh_total`.
 
 1. EDA - freeflow exploration of dataset
