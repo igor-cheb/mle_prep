@@ -19,7 +19,7 @@ class DataTransformer(BaseEstimator, TransformerMixin):
         )
 
         feat_union = FeatureUnion(transformer_list=[
-                            ('scaler', StandardScaler(),), 
+                            ('scaler', StandardScaler()), 
                             ('pca', pca_pipe)
                             ]
                         )

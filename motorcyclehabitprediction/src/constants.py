@@ -28,3 +28,15 @@ LABEL = 'y'
 
 # num of PCA output cols
 PCA_OUT_NUM = 10
+
+# num of features after transform
+NUM_FEATS = 31
+
+# size of training batch
+BATCH_SIZE = 20
+
+# number of training epochs
+NUM_EPOCHS = 100
+
+# number of steps in one epoch
+STEPS_IN_EPOCH = 5
