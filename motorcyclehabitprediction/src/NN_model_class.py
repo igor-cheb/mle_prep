@@ -28,7 +28,7 @@ class Model(torch.nn.Module):
         x = self.lin_2(x)
         return self.m(x)
 
-    def predict(self, X: np.ndarray) -> torch.Tensor:
+    def predict(self, X: np.ndarray) -> np.ndarray:
         """Function applies the NN layers and converts the ouput to class prediction"""
         return self.forward(torch.tensor(X, dtype=torch.float32)).argmax(dim=1).detach().numpy()
     
