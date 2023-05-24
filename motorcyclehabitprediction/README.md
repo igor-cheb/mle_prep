@@ -9,6 +9,6 @@ Project structure:
     <ul>
       <li>EDA: data exploration</li>
       <li>pathfinder_ETL: sandbox for iterating on ETL pipeline structure</li>
-      <li>modelling: sandbox for modelling epxeriements and saving kaggle predictions</li>
+      <li>pathfinder_modelling: sandbox for modelling epxeriements and saving kaggle predictions</li>
     </ul>
 </ul>
