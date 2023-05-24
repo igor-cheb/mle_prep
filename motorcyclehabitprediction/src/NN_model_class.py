@@ -10,14 +10,14 @@ class Model(torch.nn.Module):
         
         self.nll_loss = torch.nn.NLLLoss()
 
-        self.lin_1 = torch.nn.Linear(NUM_FEATS, 64)
+        self.lin_1 = torch.nn.Linear(NUM_FEATS, 5)
         self.gelu_1 = torch.nn.GELU()
 
-        self.lin_2 = torch.nn.Linear(64, 2)
+        self.lin_2 = torch.nn.Linear(5, 2)
         self.m = torch.nn.LogSoftmax(dim=1)
 
-        self.optimiser = torch.optim.Adam(self.parameters(), lr=1e-5)
-        self.lr_scheduler = torch.optim.lr_scheduler.StepLR(self.optimiser, step_size=20, gamma=0.7) #0.6
+        self.optimiser = torch.optim.SGD(self.parameters(), lr=1e-5)
+        self.lr_scheduler = torch.optim.lr_scheduler.StepLR(self.optimiser, step_size=100, gamma=0.7) #0.6
 
     def forward(self, x):
         x = self.lin_1(x)
@@ -26,7 +26,7 @@ class Model(torch.nn.Module):
         return self.m(x)
 
     def predict(self, X):
-        return self.forward(torch.tensor(X, dtype=torch.float32)).argmax(dim=1)
+        return self.forward(torch.tensor(X, dtype=torch.float32)).argmax(dim=1).detach().numpy()
     
     def score(self, X, y):
         return self.nll_loss(self.forward(torch.tensor(X, dtype=torch.float32)), 
@@ -47,6 +47,7 @@ class Model(torch.nn.Module):
         for _ in range(steps):
             x_batch, y_batch = self._select_batch(X, y.to_numpy()) 
             y_pred = self.forward(x_batch)
+
             loss = self.nll_loss(y_pred, y_batch)
             epoch_loss.append(loss.detach().numpy())
 

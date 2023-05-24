@@ -33,10 +33,10 @@ PCA_OUT_NUM = 10
 NUM_FEATS = 31
 
 # size of training batch
-BATCH_SIZE = 20
+BATCH_SIZE = 50
 
 # number of training epochs
-NUM_EPOCHS = 100
+NUM_EPOCHS = 500
 
 # number of steps in one epoch
-STEPS_IN_EPOCH = 5
+STEPS_IN_EPOCH = 10
