@@ -4,7 +4,7 @@ This is a quick and dirty and late solution for the Motorcycle_habit_prediction 
 Project structure:
 <ul>
   <li>data: raw data and submissions</li>
-  <li>src: varous classes and utilities used for modelling</li>
+  <li>src: various classes and utilities used for modelling</li>
   <li>notebooks:
     <ul>
       <li>EDA: data exploration</li>
