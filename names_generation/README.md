@@ -1,0 +1,1 @@
+This is a solution for the problem of new names generation based on the list of existing names with the use of simple arch. RNN.
