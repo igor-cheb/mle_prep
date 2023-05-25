@@ -1,5 +1,5 @@
-import numpy as np
 import torch
+import numpy as np
 from src.utilities import RAW_DATA_PATH
 
 class TrainSampler():
