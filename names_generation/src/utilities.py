@@ -29,5 +29,5 @@ vocabulary = [
     'z'
 ]
 
-# length of data sample
-CONTEXT_LEN = 10
+# num of epochs to train the rnn
+NUM_EPOCHS = 1000
