@@ -6,7 +6,7 @@ Project structure:
 <li>src: classes and settings used in modelling and data transformation</li>
 <li>notebooks:</li>
     <ul>
-    <li>- EDA: short data exploration</li>
-    <li>- pathfinder_modelling: sandbox for modelling experiments</li>
+    <li>EDA: short data exploration</li>
+    <li>pathfinder_modelling: sandbox for modelling experiments</li>
     </ul>
 </ul>
