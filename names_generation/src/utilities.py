@@ -29,5 +29,14 @@ vocabulary = [
     'z'
 ]
 
+# path to raw data file
+RAW_DATA_PATH = 'data/names.txt'
+
+# length for embedding for 1 character
+EMBEDDING_LEN = 16
+
+# size of the hidden output of an RNN cell
+HIDDEN_SIZE = 64
+
 # num of epochs to train the rnn
-NUM_EPOCHS = 1000
+NUM_EPOCHS = 5000

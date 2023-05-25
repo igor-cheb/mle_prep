@@ -1,8 +1,12 @@
 import numpy as np
 import torch
+from src.utilities import RAW_DATA_PATH
 
 class TrainSampler():
-    def __init__(self, vocabulary: list, file_path: str='data/names.txt'):
+    """Class for reading and sampling data for training"""
+    def __init__(self, 
+                 vocabulary: list, 
+                 file_path: str=RAW_DATA_PATH):
         self.words = open(file_path, 'r').read().splitlines()
         self.vocabulary = vocabulary
 
